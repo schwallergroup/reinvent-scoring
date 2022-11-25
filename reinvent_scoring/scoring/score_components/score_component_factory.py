@@ -11,7 +11,9 @@ from reinvent_scoring.scoring.score_components import TanimotoSimilarity, \
     QptunaPiPModelComponent, StringPiPPredictionComponent, GraphLength, NumberOfStereoCenters, \
     LinkerLengthRatio, LinkerGraphLength, LinkerEffectiveLength, LinkerNumRings, LinkerNumAliphaticRings, \
     LinkerNumAromaticRings, LinkerNumSPAtoms, LinkerNumSP2Atoms, LinkerNumSP3Atoms, LinkerNumHBA, \
-    LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings
+    LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings, \
+    IonizationPotential, ElectronAffinity, HOMO, LUMO, Dipole, GlobalElectrophilicity, GlobalNucleophilicity
+
 from reinvent_scoring.scoring.score_components.console_invoked import Icolos
 
 
@@ -73,6 +75,12 @@ class ScoreComponentFactory:
             enum.LINKER_RATIO_ROTATABLE_BONDS: LinkerRatioRotatableBonds,
             enum.DOCKSTREAM: DockStream,
             enum.ICOLOS: Icolos,
+            enum.IONIZATION_POTENTIAL: IonizationPotential,
+            enum.ELECTRON_AFFINITY: ElectronAffinity,
+            enum.HOMO: HOMO,
+            enum.LUMO: LUMO,
+            enum.GLOBAL_ELECTROPHILICITY: GlobalElectrophilicity,
+            enum.GLOBAL_NUCLEOPHILICITY: GlobalNucleophilicity
             # enum.AIZYNTH: BuildingBlockAvailabilityComponent
         }
         return component_map

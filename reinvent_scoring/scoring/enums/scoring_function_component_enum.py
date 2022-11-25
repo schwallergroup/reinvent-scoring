@@ -61,3 +61,12 @@ class ScoringFunctionComponentNameEnum:
     AIZYNTH = "aizynth"
     QPTUNA_PIP_MODEL = "optuna-multi"
     THP1_CYTOTOXICITY = "thp1-class"
+
+    # xTB Morfeus
+    IONIZATION_POTENTIAL = "ionization_potential"
+    ELECTRON_AFFINITY = "electron_affinity"
+    HOMO = "homo"
+    LUMO = "lumo"
+    DIPOLE = "dipole"
+    GLOBAL_ELECTROPHILICITY = "global_electrophilicity"
+    GLOBAL_NUCLEOPHILICITY = "global_nucleophilicity"
