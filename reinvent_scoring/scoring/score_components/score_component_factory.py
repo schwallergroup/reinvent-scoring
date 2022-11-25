@@ -11,10 +11,12 @@ from reinvent_scoring.scoring.score_components import TanimotoSimilarity, \
     QptunaPiPModelComponent, StringPiPPredictionComponent, GraphLength, NumberOfStereoCenters, \
     LinkerLengthRatio, LinkerGraphLength, LinkerEffectiveLength, LinkerNumRings, LinkerNumAliphaticRings, \
     LinkerNumAromaticRings, LinkerNumSPAtoms, LinkerNumSP2Atoms, LinkerNumSP3Atoms, LinkerNumHBA, \
-    LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings, \
-    IonizationPotential, ElectronAffinity, HOMO, LUMO, Dipole, GlobalElectrophilicity, GlobalNucleophilicity
+    LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings
 
 from reinvent_scoring.scoring.score_components.console_invoked import Icolos
+
+from reinvent_scoring.scoring.score_components.organocatalyst import \
+    IonizationPotential, ElectronAffinity, HOMO, LUMO, Dipole, GlobalElectrophilicity, GlobalNucleophilicity
 
 
 class ScoreComponentFactory:
