@@ -6,5 +6,5 @@ class HOMO(BaseMorfeusComponent):
     def __init__(self, parameters: ComponentParameters):
         super().__init__(parameters)
 
-    def _calculate_linker_property(self, mol):
+    def _calculate_morfeus_property(self, mol):
         return self._morfeus_descriptors.homo(mol)
