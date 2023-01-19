@@ -9,7 +9,7 @@ from reinvent_scoring.scoring.score_components import BaseScoreComponent
 from reinvent_scoring.scoring.score_summary import ComponentSummary
 
 
-class BaseMofeusComponent(BaseScoreComponent):
+class BaseMorfeusComponent(BaseScoreComponent):
     def __init__(self, parameters: ComponentParameters):
         super().__init__(parameters)
         self._morfeus_descriptors = MorfeusDescriptors()
