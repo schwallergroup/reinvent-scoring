@@ -1,5 +1,5 @@
 from reinvent_scoring.scoring.component_parameters import ComponentParameters
-from reinvent_scoring.scoring.score_components.organocatalyst.base_morfeus_component import BaseMofeusComponent
+from reinvent_scoring.scoring.score_components.organocatalyst.base_morfeus_component import BaseMorfeusComponent
 
 
 class GlobalNucleophilicity(BaseMorfeusComponent):
