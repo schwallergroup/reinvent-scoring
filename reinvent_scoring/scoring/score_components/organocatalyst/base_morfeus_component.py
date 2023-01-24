@@ -15,7 +15,7 @@ class BaseMorfeusComponent(BaseScoreComponent):
         self._morfeus_descriptors = MorfeusDescriptors()
 
     def calculate_score(self, molecules: List, step=-1) -> ComponentSummary:
-        score, raw_score = self._calculate_score(labeled_molecules)
+        score, raw_score = self._calculate_score(molecules)
         score_summary = ComponentSummary(total_score=score, parameters=self.parameters, raw_score=raw_score)
         return score_summary
 
