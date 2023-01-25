@@ -11,8 +11,11 @@ from reinvent_scoring.scoring.score_components import TanimotoSimilarity, \
     QptunaPiPModelComponent, StringPiPPredictionComponent, GraphLength, NumberOfStereoCenters, \
     LinkerLengthRatio, LinkerGraphLength, LinkerEffectiveLength, LinkerNumRings, LinkerNumAliphaticRings, \
     LinkerNumAromaticRings, LinkerNumSPAtoms, LinkerNumSP2Atoms, LinkerNumSP3Atoms, LinkerNumHBA, \
-    LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings, \
-    IonizationPotential, ElectronAffinity, HOMO, LUMO, Dipole, GlobalElectrophilicity, GlobalNucleophilicity
+    LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings
+
+# organocatalyst descriptors
+from reinvent_scoring.scoring.score_components import IonizationPotential, ElectronAffinity, HOMO, LUMO, Dipole, \
+    GlobalElectrophilicity, GlobalNucleophilicity, ChemicalPotential, Hardness, ElectrophilicityIndex, NucleophilicityIndex
 
 from reinvent_scoring.scoring.score_components.console_invoked import Icolos
 
@@ -80,7 +83,11 @@ class ScoreComponentFactory:
             enum.HOMO: HOMO,
             enum.LUMO: LUMO,
             enum.GLOBAL_ELECTROPHILICITY: GlobalElectrophilicity,
-            enum.GLOBAL_NUCLEOPHILICITY: GlobalNucleophilicity
+            enum.GLOBAL_NUCLEOPHILICITY: GlobalNucleophilicity,
+            enum.CHEMICAL_POTENTIAL: ChemicalPotential,
+            enum.HARDNESS: Hardness,
+            enum.ELECTROPHILICITY_INDEX: ElectrophilicityIndex,
+            enum.NUCLEOPHILICITY_INDEX: NucleophilicityIndex
             # enum.AIZYNTH: BuildingBlockAvailabilityComponent
         }
         return component_map

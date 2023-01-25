@@ -62,7 +62,7 @@ class ScoringFunctionComponentNameEnum:
     QPTUNA_PIP_MODEL = "optuna-multi"
     THP1_CYTOTOXICITY = "thp1-class"
 
-    # xTB Morfeus
+    # xTB MORFEUS
     IONIZATION_POTENTIAL = "ionization_potential"
     ELECTRON_AFFINITY = "electron_affinity"
     HOMO = "homo"
@@ -70,3 +70,8 @@ class ScoringFunctionComponentNameEnum:
     DIPOLE = "dipole"
     GLOBAL_ELECTROPHILICITY = "global_electrophilicity"
     GLOBAL_NUCLEOPHILICITY = "global_nucleophilicity"
+    CHEMICAL_POTENTIAL = "chemical_potential"
+    HARDNESS = "hardness"
+    ELECTROPHILICITY_INDEX = "electrophilicity_index"
+    NUCLEOPHILICITY_INDEX = "nucleophilicity_index"
+

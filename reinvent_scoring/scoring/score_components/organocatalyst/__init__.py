@@ -5,6 +5,10 @@ from reinvent_scoring.scoring.score_components.organocatalyst.lumo import LUMO
 from reinvent_scoring.scoring.score_components.organocatalyst.dipole import Dipole
 from reinvent_scoring.scoring.score_components.organocatalyst.global_electrophilicity import GlobalElectrophilicity
 from reinvent_scoring.scoring.score_components.organocatalyst.global_nucleophilicity import GlobalNucleophilicity
+from reinvent_scoring.scoring.score_components.organocatalyst.chemical_potential import ChemicalPotential
+from reinvent_scoring.scoring.score_components.organocatalyst.hardness import Hardness
+from reinvent_scoring.scoring.score_components.organocatalyst.electrophilicity_index import ElectrophilicityIndex
+from reinvent_scoring.scoring.score_components.organocatalyst.nucleophilicity_index import NucleophilicityIndex
 
 
 
