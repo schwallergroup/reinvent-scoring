@@ -75,3 +75,5 @@ class ScoringFunctionComponentNameEnum:
     ELECTROPHILICITY_INDEX = "electrophilicity_index"
     NUCLEOPHILICITY_INDEX = "nucleophilicity_index"
 
+    # Synthetic Accessibility
+    BASIC_SA_SCORE = "basic_sa_score"
