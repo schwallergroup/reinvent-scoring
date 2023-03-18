@@ -18,6 +18,10 @@ class BasicSAScore(BaseScoreComponent):
         super().__init__(parameters)
 
     def calculate_score(self, molecules: List[Mol], step=-1) -> ComponentSummary:
-        score = [calculateScore(mol) for mol in molecules]
-        score_summary = ComponentSummary(total_score=score, parameters=self.parameters)
+        raw_scores = np.array([calculateScore(mol) for mol in molecules])
+        transform_params = self.parameters.specific_parameters.get(
+            self.component_specific_parameters.TRANSFORMATION, {}
+        )
+        transformed_score = self._transformation_function(raw_scores, transform_params)
+        score_summary = ComponentSummary(total_score=transformed_score, parameters=self.parameters, raw_score=raw_scores)
         return score_summary
