@@ -1,1 +1,2 @@
 from reinvent_scoring.scoring.score_components.synthetic_accessibility.sas_component import SASComponent
+from reinvent_scoring.scoring.score_components.synthetic_accessibility.basic_sa_score import BasicSAScore

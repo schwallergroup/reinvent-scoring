@@ -13,6 +13,13 @@ from reinvent_scoring.scoring.score_components import TanimotoSimilarity, \
     LinkerNumAromaticRings, LinkerNumSPAtoms, LinkerNumSP2Atoms, LinkerNumSP3Atoms, LinkerNumHBA, \
     LinkerNumHBD, LinkerMolWeight, LinkerRatioRotatableBonds, DockStream, NumAromaticRings, NumAliphaticRings
 
+# organocatalyst descriptors
+from reinvent_scoring.scoring.score_components import IonizationPotential, ElectronAffinity, HOMO, LUMO, Dipole, \
+    GlobalElectrophilicity, GlobalNucleophilicity, ChemicalPotential, Hardness, ElectrophilicityIndex, NucleophilicityIndex
+
+# synthetic accessibility
+from reinvent_scoring.scoring.score_components import BasicSAScore
+
 from reinvent_scoring.scoring.score_components.console_invoked import Icolos
 
 from reinvent_scoring.scoring.score_components.organocatalyst import \
@@ -82,7 +89,12 @@ class ScoreComponentFactory:
             enum.HOMO: HOMO,
             enum.LUMO: LUMO,
             enum.GLOBAL_ELECTROPHILICITY: GlobalElectrophilicity,
-            enum.GLOBAL_NUCLEOPHILICITY: GlobalNucleophilicity
+            enum.GLOBAL_NUCLEOPHILICITY: GlobalNucleophilicity,
+            enum.CHEMICAL_POTENTIAL: ChemicalPotential,
+            enum.HARDNESS: Hardness,
+            enum.ELECTROPHILICITY_INDEX: ElectrophilicityIndex,
+            enum.NUCLEOPHILICITY_INDEX: NucleophilicityIndex,
+            enum.BASIC_SA_SCORE: BasicSAScore
             # enum.AIZYNTH: BuildingBlockAvailabilityComponent
         }
         return component_map
