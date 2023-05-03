@@ -17,10 +17,8 @@ class DiversityFilterMemory:
         component_scores = {c.parameters.name: float(c.total_score[indx]) for c in components}
         component_scores = self._include_raw_score(indx, component_scores, components)
         component_scores[self._sf_component_name.TOTAL_SCORE] = float(score)
-        #if not self.smiles_exists(smile):
-            #self._add_to_memory_dataframe(step, smile, scaffold, component_scores)
-        # TODO: temporary change
-        self._add_to_memory_dataframe(step, smile, scaffold, component_scores)
+        if not self.smiles_exists(smile):
+            self._add_to_memory_dataframe(step, smile, scaffold, component_scores)
 
     def _add_to_memory_dataframe(self, step: int, smile: str, scaffold: str, component_scores: Dict):
         data = []
