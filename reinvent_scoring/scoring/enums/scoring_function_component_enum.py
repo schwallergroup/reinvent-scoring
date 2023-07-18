@@ -9,6 +9,7 @@ class ScoringFunctionComponentNameEnum:
     ROCS_SIMILARITY = "rocs_similarity"
     MATCHING_SUBSTRUCTURE = "matching_substructure"
     TANIMOTO_SIMILARITY = "tanimoto_similarity"
+    ESPSIM_SIMILARITY = "espsim_similarity"
     JACCARD_DISTANCE = "jaccard_distance"
     CUSTOM_ALERTS = "custom_alerts"
     QED_SCORE = "qed_score"

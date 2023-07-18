@@ -5,3 +5,4 @@ from reinvent_scoring.scoring.score_components.standard.matching_substructure im
 from reinvent_scoring.scoring.score_components.standard.predictive_property_component import PredictivePropertyComponent
 from reinvent_scoring.scoring.score_components.standard.qed_score import QedScore
 from reinvent_scoring.scoring.score_components.standard.tanimoto_similarity import TanimotoSimilarity
+from reinvent_scoring.scoring.score_components.standard.espsim_similarity import EspsimSimilarity

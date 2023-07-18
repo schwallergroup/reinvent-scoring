@@ -21,6 +21,7 @@ class TanimotoSimilarity(BaseScoreComponent):
     def calculate_score(self, molecules: List) -> ComponentSummary:
         query_fps = self._chemistry.mols_to_fingerprints(molecules, self._radius, self._use_counts, self._use_features)
         score = self._similarity.calculate_tanimoto(query_fps, self._ref_fingerprints)
+
         score_summary = ComponentSummary(total_score=score, parameters=self.parameters)
         return score_summary
 
