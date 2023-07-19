@@ -14,6 +14,7 @@ class EspsimSimilarity(BaseScoreComponent):
         smiles = self.parameters.specific_parameters.get(self.component_specific_parameters.SMILES, [])
         print(smiles)
         self._ref_mols = self._similarity.smiles_to_mol(smiles)
+        print(self._ref_mols)
 
     def calculate_score(self, molecules: List) -> ComponentSummary:
         query_smis = [Chem.MolToSmiles(mol) for mol in molecules]
