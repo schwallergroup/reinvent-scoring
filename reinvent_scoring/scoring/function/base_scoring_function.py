@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 from typing import List
 
 import numpy as np
-from pathos.multiprocessing import ProcessPool
 
 from reinvent_chemistry.conversions import Conversions
 from reinvent_scoring.scoring.component_parameters import ComponentParameters
