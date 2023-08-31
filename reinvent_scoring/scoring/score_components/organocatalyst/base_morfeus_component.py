@@ -25,12 +25,18 @@ class BaseMorfeusComponent(BaseScoreComponent):
             try:
                 score = self._calculate_morfeus_property(mol)
             except ValueError:
-                score = 0.0
+                score = "error"
             scores.append(score)
         transform_params = self.parameters.specific_parameters.get(
             self.component_specific_parameters.TRANSFORMATION, {}
         )
         transformed_scores = self._transformation_function(scores, transform_params)
+        # xTB geometry may not be successful - remove all "errors" and assign a score of 0
+        # TODO: a bit hacky as the raw scores should also be reflected by this penalization
+        error_indices = [idx for idx, val in enumerate(transformed_scores) if val ==  "error"]
+        # set the error indices to 0 reward
+        transformed_scores[error_indices] = 0.0
+        
         return np.array(transformed_scores, dtype=np.float32), np.array(scores, dtype=np.float32)
 
     @abstractmethod
