@@ -24,4 +24,8 @@ class QedScore(BaseScoreComponent):
             except ValueError:
                 qed_score = 0.0
             qed_scores.append(qed_score)
-        return np.array(qed_scores, dtype=np.float32)
+        transform_params = self.parameters.specific_parameters.get(
+            self.component_specific_parameters.TRANSFORMATION, {}
+        )
+        transformed_scores = self._transformation_function(qed_scores, transform_params)
+        return np.array(transformed_scores, dtype=np.float32), np.array(qed_scores, dtype=np.float32)
